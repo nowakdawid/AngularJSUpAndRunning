@@ -1,10 +1,22 @@
 <!-- File: chapter1/basic-angularjs-app.html -->
 <!DOCTYPE html>
-<html ng-app>
-<body>
+<html ng-app="helloApp">
+<body ng-controller="MainCtrl as ctrl">
 <h1>Hello {{1 + 2}}</h1>
-<script
-        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+
+<h2><span ng-bind="ctrl.name"></span></h2>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+</script>
+<script>
+
+    angular.module("helloApp", [])
+            .controller("MainCtrl", [function () {
+
+                var self = this;
+                self.name = "Dawid";
+
+            }]);
+
 </script>
 </body>
 </html>
