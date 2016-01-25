@@ -1,6 +1,6 @@
-// File: chapter11/ng-include/app.js
+// File: chapter11/directive-with-scope-advanced/app.js
 angular.module('stockMarketApp', [])
-    .controller('MainCtrl', [function () {
+    .controller('MainCtrl', [function() {
         var self = this;
         self.stocks = [
             {name: 'First Stock', price: 100, previous: 220},
@@ -8,9 +8,7 @@ angular.module('stockMarketApp', [])
             {name: 'Third Stock', price: 110, previous: 110},
             {name: 'Fourth Stock', price: 400, previous: 420}
         ];
-        self.stockTemplate = 'stock.html';
-        self.getChange = function (stock) {
-            return Math.ceil((
-            (stock.price - stock.previous) / stock.previous) * 100);
+        self.onStockSelect = function(price, name) {
+            console.log('Selected Price ', price, 'Name ', name);
         };
     }]);

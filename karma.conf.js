@@ -19,7 +19,9 @@ module.exports = function (config) {
             'angular-mocks.js',
             'testTest.js',
             'chapter_3/62/controller.js',
-            'chapter_3/62/controllerSpec.js'
+            'chapter_3/62/controllerSpec.js',
+            'chapter_12/215/stockDirective.js',
+            'chapter_12/215/stockDirectiveRenderSpec.js'
         ],
 
 
